@@ -3342,9 +3342,7 @@
     }).observe(endingScreen, { attributes: true, attributeFilter: ["hidden"] });
 
     document.getElementById("btn-ending-close").addEventListener("click", function () {
-      try {
-        window.close();
-      } catch (e) {}
+      showScreen("screen-return");
     });
     document.getElementById("btn-back-ending").addEventListener("click", function () {
       showScreen("screen-before-ending");

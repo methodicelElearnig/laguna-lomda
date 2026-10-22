@@ -2607,6 +2607,30 @@ body {
   font-weight: 500;
 }
 
+/* ---------- Screen 11: final black "return to the model" screen ---------- */
+
+#screen-return {
+  background: #000;
+}
+
+.return-stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 120px;
+}
+
+.return-text {
+  margin: 0;
+  text-align: center;
+  font-size: 84px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #fff;
+}
+
 /* ---------- DEV nav bar (screen jump tool, matches index_dev.html) ---------- */
 
 .dev-bar {
