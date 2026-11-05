@@ -2605,30 +2605,41 @@ body {
   margin: 0;
   font-size: 22px;
   font-weight: 500;
+  line-height: 1.6;
 }
 
-/* ---------- Screen 11: final black "return to the model" screen ---------- */
-
-#screen-return {
-  background: #000;
-}
-
-.return-stage {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 120px;
-}
-
-.return-text {
-  margin: 0;
-  text-align: center;
-  font-size: 84px;
-  line-height: 1.4;
-  font-weight: 700;
+.ending-close-link {
+  pointer-events: auto;
+  display: block;
+  margin: 0 auto 10px;
+  padding: 6px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #1159a2;
   color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ending-close-link:hover,
+.ending-close-link:focus-visible {
+  background: #0d4780;
+}
+
+.ending-close-link:focus-visible {
+  outline: 3px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+.ending-close-fallback {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ending-close-fallback[hidden] {
+  display: none;
 }
 
 /* ---------- DEV nav bar (screen jump tool, matches index_dev.html) ---------- */

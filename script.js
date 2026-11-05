@@ -3342,7 +3342,15 @@
     }).observe(endingScreen, { attributes: true, attributeFilter: ["hidden"] });
 
     document.getElementById("btn-ending-close").addEventListener("click", function () {
-      showScreen("screen-return");
+      try {
+        window.close();
+      } catch (e) {}
+      /* window.close() only works on a window the page's script opened;
+         otherwise the browser ignores it, so show a manual instruction. */
+      setTimeout(function () {
+        var fb = document.getElementById("ending-close-fallback");
+        if (fb) { fb.hidden = false; }
+      }, 300);
     });
     document.getElementById("btn-back-ending").addEventListener("click", function () {
       showScreen("screen-before-ending");

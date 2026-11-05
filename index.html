@@ -1388,27 +1388,20 @@
 
     <div class="ending-panel" data-reveal="1">
       <img class="ending-panel-img" src="assets/small blob ending.png" alt="">
-      <button type="button" class="btn-help-close" id="btn-ending-close" aria-label="סגירת הקורס"></button>
       <div class="ending-text">
         <p class="ending-line1">כל הכבוד, המשימה הושלמה!</p>
         <p class="ending-score-line">הציון שלך הוא <span id="ending-score">--</span></p>
-        <p class="ending-line3">יש לסגור את המשימה בלחיצה על X</p>
+        <p class="ending-line3">
+          <button type="button" class="ending-close-link" id="btn-ending-close">לחצו כאן לסיום הלומדה וחזרו למודל.</button>
+          לאחר מכן, לחצו על "העמוד הבא" וענו על השאלות.
+        </p>
+        <p class="ending-close-fallback" id="ending-close-fallback" role="status" hidden>אפשר לסגור את החלון ולחזור למודל.</p>
       </div>
     </div>
 
     <button type="button" class="nav-back" id="btn-back-ending" aria-label="חזרה">
       <img src="assets/btn-nav.png" alt="">
     </button>
-  </main>
-
-  <main class="screen" id="screen-return" data-screen="21" hidden>
-    <div class="return-stage" data-reveal="1">
-      <p class="return-text">
-        כעת חזרו אל המודל,<br>
-        לחצו על הכפתור "העמוד הבא"<br>
-        וענו על השאלות.
-      </p>
-    </div>
   </main>
 
   <!-- ===== Shared image-zoom modal (reused by any screen with a [data-zoom-src] button) ===== -->
