@@ -3347,5 +3347,16 @@
     document.getElementById("btn-back-ending").addEventListener("click", function () {
       showScreen("screen-before-ending");
     });
+
+    // Closes the popup window Moodle opened for the lomda. Browsers only allow
+    // window.close() on script-opened windows, so if it is still open a moment
+    // later, tell the learner to close it themselves.
+    document.getElementById("btn-return-close").addEventListener("click", function () {
+      try { window.close(); } catch (e) {}
+      try { if (window.top !== window) window.top.close(); } catch (e) {}
+      setTimeout(function () {
+        document.getElementById("return-hint").hidden = false;
+      }, 400);
+    });
   })();
 })();
