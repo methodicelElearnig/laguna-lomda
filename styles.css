@@ -2634,13 +2634,13 @@ body {
 }
 
 .return-close {
-  padding: 24px 72px;
-  border-radius: 18px;
+  padding: 18px 54px;
+  border-radius: 14px;
   background: #fff;
   color: #000;
   border: 3px solid #fff;
   font: inherit;
-  font-size: 60px;
+  font-size: 46px;
   font-weight: 700;
   cursor: pointer;
 }
@@ -2698,3 +2698,12 @@ body {
   cursor: text;
 }
 
+
+/* Moodle logo inline in the return-to-course text */
+.return-moodle-logo {
+  display: inline-block;
+  height: 0.85em;
+  width: auto;
+  margin-inline-start: 0.25em;
+  vertical-align: -0.1em;
+}
